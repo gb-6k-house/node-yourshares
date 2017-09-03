@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "compile lib",
+            "command": "gulp",
+            "args": [
+                "compile",
+                "--gulpfile",
+                "${workspaceRoot}/gulpfile.js"
+            ],
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "taskName": "compile demo",
+            "command": "gulp",
+            "args": [
+                "compile",
+                "--gulpfile",
+                "${workspaceRoot}/demo/gulpfile.js"
+            ],
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

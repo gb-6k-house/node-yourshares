@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "inlineSources": true,
+    "inlineSourceMap": true,
+    "outDir": "dist",
+    "typeRoots": ["./lib/types"],
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false
+    // "noImplicitAny": false
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}
+

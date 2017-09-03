@@ -1,0 +1,27 @@
+{
+  "name": "node-rpc-yourshares",
+  "version": "0.1.8",
+  "description": "基于hprose封装的RPC模块",
+  "scripts": {},
+  "author": "liukai",
+  "license": "ISC",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "@types/express": "^4.0.36",
+    "express": "^4.15.3",
+    "hprose": "~2.0.42"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-shell": "^0.6.3"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gb-6k-house/node-rpc-yourshares.git"
+  },
+  "homepage": "git+https://github.com/gb-6k-house/gb-6k-house.github.io"
+}

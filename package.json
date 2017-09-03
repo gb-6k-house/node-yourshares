@@ -1,0 +1,41 @@
+{
+  "name": "node-yourshares",
+  "version": "0.1.0",
+  "description": "基于hprose封装的RPC模块，Http简单封装，ORM简单封装，",
+  "types": "/lib/types/index.d.ts",
+  "typings": "lib/types/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {},
+  "author": "liukai",
+  "license": "ISC",
+  "main": "./lib/index.js",
+  "keywords": [
+    "rpc",
+    "typescript",
+    "yourshares",
+    "SDK",
+    "Core"
+  ],
+  "dependencies": {
+    "@types/express": "^4.0.37",
+    "bluebird": "^3.5.0",
+    "express": "^4.15.4",
+    "hprose": "~2.0.45",
+    "sequelize": "^4.8.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-shell": "^0.6.3"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gb-6k-house/node-rpc-yourshares.git"
+  },
+  "homepage": "git+https://github.com/gb-6k-house/gb-6k-house.github.io"
+}
