@@ -12,17 +12,19 @@ import { YSErrorType, YSErrorTabel, YSPurifyMessage } from "./YSError"
 import { RpcConfig} from "./YSRpcConfig"
 import { RPCClient} from "./YSRpcClient"
 import { YSDBManager, YSTable} from "./YSTable"
+import * as Sequelize from 'sequelize';
 
-// Ensure this is treated as a module
 export {
-    String, 
-    RPCStartup ,
+    Sequelize,
+    String,
+    RPCStartup,
     RPCClient,
-    RpcService, 
+    RpcService,
     RpcConfig,
-    YSHttpHandle, 
+    YSHttpHandle,
     YSErrorType,
     YSErrorTabel,
     YSPurifyMessage,
-    YSDBManager, YSTable
-}
+    YSDBManager,
+    YSTable
+};

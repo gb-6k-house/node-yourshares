@@ -11,4 +11,5 @@ import { YSHttpHandle } from "./YSHttpHandle";
 import { YSErrorType, YSErrorTabel, YSPurifyMessage } from "./YSError";
 import { RpcConfig } from "./YSRpcConfig";
 import { RPCClient } from "./YSRpcClient";
-export { String, RPCStartup, RPCClient, RpcService, RpcConfig, YSHttpHandle, YSErrorType, YSErrorTabel, YSPurifyMessage };
+import { YSDBManager, YSTable } from "./YSTable";
+export { String, RPCStartup, RPCClient, RpcService, RpcConfig, YSHttpHandle, YSErrorType, YSErrorTabel, YSPurifyMessage, YSDBManager, YSTable };

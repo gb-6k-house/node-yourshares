@@ -21,6 +21,17 @@ let httpMethod = ['post', 'get', 'delete', 'ALL']
  * @class YSHttpHandle
  */
 
+ //请求的基本信息
+ function reject(func: Function): Function {
+    return function(req, res, next) {
+            // let message = `收到请求-> ${req.originalUrl}`
+            // if(req.body != null) {
+            //     message +=  (typeof req.body === 'object')? `数据体: \n ${JSON.stringify(req.body)}`:`数据体: \n ${req.body}`
+            // }
+            // console.log(message)
+            func(req, res, next)
+    }
+ }
 
 export abstract class YSHttpHandle {
     prefix = ""
@@ -82,14 +93,14 @@ export abstract class YSHttpHandle {
      * @param {any} data 
      * @memberof YSHttpHandle
      */
-   public static sendJSONData (response, error: YSErrorType, data) {
+   public static sendJSONData (response, error: YSErrorType, data?: any) {
         let obj:any = {};
         obj.code = error.code;
         obj.msg = YSPurifyMessage(error);
-        if (data) {
+        if (data != null) {
             obj.data = data;
         }
-        console.info(response.req.url + ' 返回数据包:' + JSON.stringify(obj));
+        console.info(response.req.originalUrl + ' 返回数据包:' + JSON.stringify(obj));
         response.set('Content-Type', 'application/json')
         response.send(obj);
     }
