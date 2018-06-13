@@ -1,8 +1,7 @@
 # node-yourshares
 #### 项目介绍
 
-按照【 约定优于配置】的开发原则，快速搭建HTTP服务，RPC服务的框架
-主要包括三大块功能
+按照【 约定优于配置】的开发原则，快速搭建HTTP服务，RPC服务的框架主要包括三大块功能
 1. 快速定义Http接口服务。
 2. 快速定义RPC服务端
 3. 基于ORM，快速定义自身的数据模型。
@@ -43,7 +42,7 @@ class TestHttpHandle extends YSHttpHandle {
 几点说明  
 1. 需要发布的http接口函数名形式必须形如: get_xxx_xxx;
 2. 框架自动识别对象中以['post', 'get', 'delete', 'all']开头的方法进行发布。 
-3. API请求的方式，以函数名开头的['post', 'get', 'delete', 'all']为标识。比如需要发布post请求的方法。则可以名称为post_xx的方法。
+3. API请求的方式，以函数名开头的['post', 'get', 'delete', 'all']为标识。比如需要发布post请求的方法。则可以名称为post_xx的方法。
 4. api的路径根据方法名来定义。比如方法 post_hello_world，它实际表示的意思是。发布post接口，路径为/hello/world
 
 
