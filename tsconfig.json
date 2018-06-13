@@ -1,23 +1,24 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "inlineSources": true,
     "inlineSourceMap": true,
     "outDir": "lib",
-    "typeRoots": ["./lib/types"],
+    "types": [],
+    "typeRoots": [],
     "declaration": true,
-   "declarationDir": "./lib/types",
+    "declarationDir": "./lib/types", //定义声明ts声明文件的输出目录
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false
     // "noImplicitAny": false
   },
   "exclude": [
-    "node_modules"
+    "node_modules", "node_modules/grpc"
   ],
   "include": [
-    "src/**/*"
+    "./src/**/*"
   ]
 }
 

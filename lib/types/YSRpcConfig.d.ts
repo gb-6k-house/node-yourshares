@@ -6,6 +6,7 @@
 ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
 ******************************************************************************/
 export interface RpcConfig {
-    host: String;
-    name: String;
+    ip: String;
+    port: String;
+    name?: String;
 }

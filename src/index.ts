@@ -13,8 +13,10 @@ import { RpcConfig} from "./YSRpcConfig"
 import { RPCClient} from "./YSRpcClient"
 import { YSDBManager, YSTable} from "./YSTable"
 import * as Sequelize from 'sequelize';
+import * as express from "express"
 
 export {
+    express,
     Sequelize,
     String,
     RPCStartup,

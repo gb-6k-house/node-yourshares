@@ -5,7 +5,8 @@
 ** desc:  说明
 ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
 ******************************************************************************/
-var http = require('http');
+
+import * as http from 'http'
 
 export class MyRequest {
     host: string
@@ -21,7 +22,7 @@ export class MyRequest {
             headers = cb;
             cb = data;
         }
-        headers = Object.assign({      }, headers)
+        // headers = Object.assign({      }, headers)
         console.info(path + " 头部信息: " + JSON.stringify(headers));
 
         var opt = {

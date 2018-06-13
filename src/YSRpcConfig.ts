@@ -8,6 +8,7 @@
 ******************************************************************************/
 
 export interface RpcConfig {
-    host: String, // 服务器地址 可参照hprose的配置 https://github.com/hprose/hprose-nodejs
-    name: String, //服务器名称
+    ip: String,
+    port: String,
+    name?: String, //服务器名称
 }

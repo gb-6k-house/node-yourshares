@@ -7,7 +7,7 @@
 ******************************************************************************/
 import { YSErrorType, YSErrorTabel, YSPurifyMessage } from "./YSError"
 
-let httpMethod = ['post', 'get', 'delete', 'ALL']
+let httpMethod = ['post', 'get', 'delete', 'all']
 /**
  * http发布， 发布函数名格式 {Method}_{FunctionName}的方法 
  * 其中: Method是 http请求的方法

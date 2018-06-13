@@ -10,13 +10,13 @@ var clean = require('gulp-clean');
 
 
 gulp.task("clean", function(){
-    return gulp.src('./dist/')
+    return gulp.src('./dist/*')
         .pipe(clean());
 })
 
 gulp.task('copy', ['clean'], function() {
-    return gulp.src('configes/*.json')
-        .pipe(gulp.dest('dist/configes/'));
+    return gulp.src('./src/protos/*.*')
+        .pipe(gulp.dest('./dist/demo/src/protos/'));
 });
 
 

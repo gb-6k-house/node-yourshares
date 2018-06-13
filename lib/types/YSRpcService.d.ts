@@ -1,5 +1,14 @@
+/****************************************************************************
+** 尧尚信息科技(wwww.yourshares.cn)
+** auth: liukai
+** date: 2017/7
+** ver : 1.0
+** desc:  RPC发布
+***************************************************************************/
 import { RpcConfig } from "./YSRpcConfig";
 export interface RpcService {
+    serviceName: string;
+    object: any;
 }
 /**
  * RPC服务器启动程序
@@ -8,32 +17,26 @@ export interface RpcService {
  * @abstract
  * @class RPCStartup
  */
-export declare abstract class RPCStartup {
+export declare class RPCStartup {
     private server;
     private rpclist;
-    private startup();
-    protected abstract serverHost(): RpcConfig;
+    private packageName;
+    private protoPath;
+    private addressConfig;
     /**
-     * 需要发布的对象
      *
-     * @protected
-     * @abstract
-     * @returns {RpcService}
-     * @memberof RPCStartup
+     * @param adrees
+=     * @param protoPath .proto file 路径
+     * @param packageName  proto说明文件中package名称
      */
-    protected abstract rpcClass(): [RpcService];
+    constructor(address: RpcConfig, protoPath: string, packageName: string);
+    private findService;
     /**
-     * 发布rpcClass类型的所有static 方法 _开头的方法不会发布
-     *
-     * @memberof RPCStartup
+     * 发布服务
      */
-    private publishAPI();
+    publish(): void;
     /**
-     * 启动Service
-     *
-     * @static
-     * @returns {number}
-     * @memberof RPCStartup
+     * 添加发布对象
      */
-    static main(): number;
+    addService(server: RpcService): void;
 }

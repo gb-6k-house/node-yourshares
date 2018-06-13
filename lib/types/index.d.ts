@@ -13,4 +13,5 @@ import { RpcConfig } from "./YSRpcConfig";
 import { RPCClient } from "./YSRpcClient";
 import { YSDBManager, YSTable } from "./YSTable";
 import * as Sequelize from 'sequelize';
-export { Sequelize, String, RPCStartup, RPCClient, RpcService, RpcConfig, YSHttpHandle, YSErrorType, YSErrorTabel, YSPurifyMessage, YSDBManager, YSTable };
+import * as express from "express";
+export { express, Sequelize, String, RPCStartup, RPCClient, RpcService, RpcConfig, YSHttpHandle, YSErrorType, YSErrorTabel, YSPurifyMessage, YSDBManager, YSTable };

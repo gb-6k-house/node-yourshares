@@ -6,16 +6,13 @@
 ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
 ******************************************************************************/
 
-import {YSHttpHandle, RPCClient } from "../../src"
+import {YSHttpHandle } from "../../src"
 
-import Express = require('express');
-
+import * as express from "express"
 
 let config1 = {host:"tcp://127.0.0.1:9001", name: 'Test'}
 
-let rpc =  new RPCClient(config1)
-
-let app = Express()
+let app = express()
 class TestHttpHandle extends YSHttpHandle {
     public post_teacher(req, res, next) {
       console.log(`post_teacher body: ${req.body}`)
