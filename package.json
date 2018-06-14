@@ -1,6 +1,6 @@
 {
   "name": "node-yourshares",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "按照【 约定优于配置】的开发原则，快速搭建HTTP服务，RPC服务的框架",
   "types": "/lib/types/index.d.ts",
   "typings": "lib/types/index.d.ts",
