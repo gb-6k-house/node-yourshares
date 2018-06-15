@@ -74,11 +74,25 @@ export  class RPCStartup {
                 if (serviceObject !== undefined && serviceObject.object !== undefined) {
                     let apiObject =  serviceObject.object
                     var routerObject = {}
-                    // Object.getOwnPropertyNames(apiObject).forEach( //
-                    Object.keys(Object.getPrototypeOf(apiObject)).forEach(rpcFuncName => {
+                    //Object.keys(Object.getPrototypeOf(apiObject))
+                    //获取自己本身的属性
+                    Object.getOwnPropertyNames(apiObject).forEach(rpcFuncName => {
                         //发布apiObject 方法 
                         //所有未在.proto中定义和_开头的方法不会发布
+                        // console.log(`${LOG_PRE} find object ${serviceObject.serviceName} function: ${rpcFuncName}`)
                         if (proto[propertyName].service[rpcFuncName] !== undefined 
+                            && typeof apiObject[rpcFuncName] === 'function'
+                             && !rpcFuncName.hasPrefix('_')){
+                            console.log(`${LOG_PRE} ${serviceObject.serviceName} 发布接口 ${rpcFuncName}`)
+                            routerObject[rpcFuncName] =  apiObject[rpcFuncName]
+                        }
+                    })
+                    //获取原型连上的方法
+                    Object.getOwnPropertyNames(Object.getPrototypeOf(apiObject)).forEach(rpcFuncName => {
+                        //发布apiObject 方法 
+                        //所有未在.proto中定义和_开头的方法不会发布
+                        // console.log(`${LOG_PRE} find object ${serviceObject.serviceName} function: ${rpcFuncName}`)
+                        if (rpcFuncName !== 'constructor' && proto[propertyName].service[rpcFuncName] !== undefined 
                             && typeof apiObject[rpcFuncName] === 'function'
                              && !rpcFuncName.hasPrefix('_')){
                             console.log(`${LOG_PRE} ${serviceObject.serviceName} 发布接口 ${rpcFuncName}`)
